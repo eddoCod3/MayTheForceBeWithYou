@@ -1,0 +1,77 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background:black;
+    max-width: 100%;height: auto;
+    text-align: center;
+}
+.main{
+
+    animation: move 1.5s infinite alternate;
+    z-index: 2;
+
+}
+.bb{
+    position: relative;
+    animation: moveScreen 8s infinite alternate;
+    width: 50px;
+    opacity: .1;
+    transition: all ease-in;
+
+}
+.r2d2{
+    position: relative;
+    width: 50px;
+    animation:  space  4s infinite alternate;
+}
+
+.imgtext{
+    position: absolute;
+    top: 500px;
+}
+@keyframes move{
+    from{transform: translateY(40px);}
+    to{transform: translateY(0px);}
+}
+@keyframes moveScreen{
+    0%{left:-300px;
+        top:-50px;
+        bottom: -40px;
+        transform: rotateZ(0deg);  
+        
+    }
+    30%{left:200px;
+        top:40px;
+        bottom: 20px;
+        transform: rotateZ(20deg);  
+        
+
+    }
+    100%{left:720px;
+        top:90px;
+        bottom: 40px;
+        transform: rotateZ(70deg);  
+        
+    }
+}
+
+@keyframes space{
+    0%{
+        left: -200px;
+        bottom: -200px;
+        transform: rotateZ(5deg);  
+    }
+    100%{
+        left: 600px;
+        bottom: 100px;
+        transform: rotateZ(60deg);  
+
+    }
+}
